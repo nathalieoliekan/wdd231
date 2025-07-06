@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Course home page for WDD 231: Web Frontend Development II" />
+    <meta name="author" content="Nathalie Oliekan" />
+    <title>WDD 231 | Home</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    
+    <!-- JavaScript Files -->
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" width="50" height="50" />
+        <span>Nathalie Oliekan</span>
+        <button id="menu" aria-label="Open navigation menu">☰</button>
+    </header>
+
+    <nav id="navMenu">
+        <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/">Chamber</a></li>
+        <li><a href="final/">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="grid-layout">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>Hello! My name is Nathalie Oliekan, and I'm currently studying web development as part of the BYU-Idaho online program. I'm passionate about learning front-end technologies and building real-world web projects that are responsive, accessible, and creative.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio est voluptatum exercitationem molestiae culpa tempora. Iusto ad dolor accusantium ipsa harum officia est quaerat sed provident, deserunt, totam velit soluta?</p>
+            </section>
+
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.jpg" alt="Profile photo of Nathalie Oliekan" width="200" height="200" />
+            </section>
+        </div>
+        
+        <!-- Create section that js file will update as needed -->
+        <section class="web-courses">
+            <h2>Web Certificate Courses</h2>
+            <ul></ul> 
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="socials">
+        <a href="https://github.com/nathalieoliekan" target="_blank" aria-label="GitHub">
+            <img src="images/github.svg" alt="GitHub icon" width="24" height="24" />
+        </a>
+        <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.svg" alt="LinkedIn icon" width="24" height="24" />
+        </a>
+        <!-- Add more links later -->
+        </div>
+        <p>&copy; <span id="year"></span> Nathalie Oliekan | Madagascar</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+    background: none;
+    border: none;
+  }
+
+  nav li a {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+  main {
+    display: block;
+  }
+
+  .web-courses {
+    margin-top: 2rem;
+  }
+
+  .course-link {
+    height: 120px;
+  }
+}
