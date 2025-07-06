@@ -60,6 +60,8 @@ const courses = [
     completed: false
   }
 ];
+// can I also add other classes that I have taken? Could also repeat this type of
+// code for other certificates or for whole degree to show progress
 
 const courseSection = document.querySelector(".web-courses ul");
 const totalCreditsDisplay = document.createElement("p");
@@ -75,7 +77,7 @@ function renderCourses(filteredCourses) {
     const a = document.createElement("a");
     a.className = "course-link";
     a.textContent = `${course.subject} ${course.number}: ${course.title}`;
-    a.href = "#"; // You can replace this later with real links
+    a.href = "#"; 
 
     if (course.completed) {
       a.classList.add("completed");
