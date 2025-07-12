@@ -1,0 +1,53 @@
+@media screen and (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+    background: none;
+    border: none;
+  }
+
+  nav li a {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: #333;
+  }
+
+  nav li a:hover,
+  nav li a.active {
+    background-color: #ddd;
+    font-weight: bold;
+  }
+
+  main {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 200px;
+    flex-wrap: nowrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .footer-section.socials {
+    text-align: center;
+  }
+
+  .footer-section.dev-info {
+    text-align: right;
+  }
+
+}

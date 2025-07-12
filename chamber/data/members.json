@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Blue Sky Technologies",
+      "address": "123 Innovation Way, Phoenix, AZ",
+      "phone": "(602) 123-4567",
+      "website": "https://blueskytech.com",
+      "image": "bluesky.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Desert Bloom Cafe",
+      "address": "456 Flower St, Tucson, AZ",
+      "phone": "(520) 555-2345",
+      "website": "https://desertbloomcafe.com",
+      "image": "desertbloom.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Cactus Web Solutions",
+      "address": "789 Digital Rd, Mesa, AZ",
+      "phone": "(480) 999-0000",
+      "website": "https://cactusweb.com",
+      "image": "cactusweb.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Sun Valley Auto",
+      "address": "321 Mechanic Ln, Chandler, AZ",
+      "phone": "(480) 876-4321",
+      "website": "https://sunvalleyauto.com",
+      "image": "sunvalley.png",
+      "membership": "Member"
+    },
+    {
+      "name": "Saguaro Realty",
+      "address": "135 Home Dr, Scottsdale, AZ",
+      "phone": "(480) 543-1234",
+      "website": "https://saguarorealty.com",
+      "image": "saguaro.png",
+      "membership": "Silver"
+    },
+    {
+      "name": "Copper State Bank",
+      "address": "246 Finance Ave, Tempe, AZ",
+      "phone": "(602) 111-2222",
+      "website": "https://copperstatebank.com",
+      "image": "copperbank.png",
+      "membership": "Gold"
+    },
+    {
+      "name": "Red Rock Fitness",
+      "address": "987 Fit Ln, Flagstaff, AZ",
+      "phone": "(928) 777-1212",
+      "website": "https://redrockfit.com",
+      "image": "redrock.png",
+      "membership": "Member"
+    }
+  ]
+}
