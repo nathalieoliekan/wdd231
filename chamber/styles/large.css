@@ -51,3 +51,31 @@
   }
 
 }
+
+/* Home page styling */
+
+.info-row {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.current-events,
+.weather {
+  flex: 1;
+  margin: 0.5rem;
+}
+
+.spotlight-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.spotlight-container .member-card {
+  flex: 1 1 30%;
+  max-width: 30%;
+}
+
