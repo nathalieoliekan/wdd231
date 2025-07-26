@@ -79,3 +79,16 @@
   max-width: 30%;
 }
 
+/* Join Us Page styling */
+
+@media (min-width: 768px) {
+  .join-page {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .membership-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+  }
+}

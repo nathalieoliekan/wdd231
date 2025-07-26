@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Join Page WDD 231: Web Frontend Development II">
+  <meta name="author" content="Nathalie Oliekan">
+  <title>WDD 231 | Chamber of Commerce Join Us Page</title>
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="Chamber of Commerce Join - WDD 231">
+  <meta property="og:description" content="A Home page for the Chamber of Commerce website project in WDD 231.">
+  <meta property="og:image" content="https://yourdomain.com/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS Style References -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+
+  <!-- Javascript References -->
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <img src="images/coc_logo.png" alt="Site Logo" width="50" height="50" />
+    <span>Chamber of Commerce</span>
+    <button id="menu" aria-label="Open navigation menu">☰</button>
+  </header>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join Us</a></li>
+    </ul>
+  </nav>
+
+<main class="join-page">
+
+  <h1>Join the Chamber</h1>
+
+  <form method="get" action="thankyou.html" class="join-form">
+
+    <label>
+      First Name:
+      <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+    </label>
+
+    <label>
+      Last Name:
+      <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+    </label>
+
+    <label>
+      Organizational Title:
+      <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="Manager" required>
+    </label>
+
+    <label>
+      Email:
+      <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+    </label>
+
+    <label>
+      Mobile Phone:
+      <input type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
+    </label>
+
+    <label>
+      Business/Organization Name:
+      <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+    </label>
+
+    <label>
+      Membership Level:
+      <select name="membership" title="Select Membership Level">
+        <option value="np">NP Membership</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+      </select>
+    </label>
+
+    <label>
+      Organization Description:
+      <textarea name="description" title="Organization Description" rows="4" cols="30"></textarea>
+    </label>
+
+    <input type="hidden" name="timestamp" id="timestamp">
+
+    <input type="submit" value="Join Now">
+  </form>
+
+  <!-- Membership Info Cards -->
+  <section class="membership-cards">
+    <div class="card np" tabindex="0">
+      <h2>NP Membership</h2>
+      <p>No fee. Perfect for non-profits.</p>
+      <a href="#" class="modal-link" data-modal="modal-np">More Info</a>
+    </div>
+
+    <div class="card bronze" tabindex="0">
+      <h2>Bronze Membership</h2>
+      <p>Basic membership perks.</p>
+      <a href="#" class="modal-link" data-modal="modal-bronze">More Info</a>
+    </div>
+
+    <div class="card silver" tabindex="0">
+      <h2>Silver Membership</h2>
+      <p>Includes training & exposure.</p>
+      <a href="#" class="modal-link" data-modal="modal-silver">More Info</a>
+    </div>
+
+    <div class="card gold" tabindex="0">
+      <h2>Gold Membership</h2>
+      <p>Full access and premium benefits.</p>
+      <a href="#" class="modal-link" data-modal="modal-gold">More Info</a>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div id="modal-np" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="modal-np">&times;</span>
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>Free listing</li>
+        <li>Community access</li>
+        <li>Event participation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-bronze" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="modal-bronze">&times;</span>
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>Business listing</li>
+        <li>Newsletter inclusion</li>
+        <li>1 event ticket/month</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-silver" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="modal-silver">&times;</span>
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>Everything in Bronze</li>
+        <li>Training opportunities</li>
+        <li>Ad placement</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-gold" class="modal">
+    <div class="modal-content">
+      <span class="close" data-modal="modal-gold">&times;</span>
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>Everything in Silver</li>
+        <li>Spotlight on homepage</li>
+        <li>Discounted event booths</li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+  <footer>
+    <div class="footer-section contact-info">
+      <h4>Chamber of Commerce</h4>
+      <p>123 Main Street<br>Cityville, AZ 85001</p>
+      <p>Email: <a href="mailto:info@chamberofcommerce.org">info@chamberofcommerce.org</a></p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+
+    <div class="footer-section socials">
+      <a href="https://github.com/nathalieoliekan" target="_blank" aria-label="GitHub">
+        <img src="images/github_icon.jpg" alt="GitHub icon" width="24" height="24" />
+      </a>
+      <a href="https://www.linkedin.com/in/nathalieoliekan/" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin_icon.jpg" alt="LinkedIn icon" width="24" height="24" />
+      </a>
+    </div>
+
+    <div class="footer-section dev-info">
+      <p>Nathalie Oliekan | WDD 231</p>
+      <p>&copy; <span id="year"></span></p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>
