@@ -92,3 +92,48 @@
     max-width: 500px;
   }
 }
+
+/*  Discover Page styling */
+
+.visits-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f8ff;
+  border-bottom: 1px solid #ccc;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.discover-grid article {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.discover-grid article:hover {
+  transform: scale(1.02);
+}
+
+.discover-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.discover-grid h3 {
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.discover-grid p {
+  margin: 0 1rem 1.5rem 1rem;
+  color: #444;
+}

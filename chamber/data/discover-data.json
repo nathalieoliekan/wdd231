@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Farmers Market",
+    "description": "Fresh produce every Saturday in the city square.",
+    "image": "images/discover/farmers-market.jpg"
+  },
+  {
+    "title": "Local Parade",
+    "description": "Join our annual celebration of community and culture.",
+    "image": "images/discover/parade.jpg"
+  },
+  {
+    "title": "Community Garden",
+    "description": "Get involved and grow your own vegetables with neighbors.",
+    "image": "images/discover/garden.jpg"
+  },
+  {
+    "title": "Historic Town Hall",
+    "description": "Visit our iconic Town Hall established in 1887.",
+    "image": "images/discover/townhall.jpg"
+  },
+  {
+    "title": "Tech Expo",
+    "description": "Showcasing local startups and innovations.",
+    "image": "images/discover/tech-expo.jpg"
+  },
+  {
+    "title": "Art in the Park",
+    "description": "Outdoor art gallery every first Friday.",
+    "image": "images/discover/art.jpg"
+  },
+  {
+    "title": "Library Story Time",
+    "description": "For children and families every Wednesday morning.",
+    "image": "images/discover/library.jpg"
+  },
+  {
+    "title": "Business Networking Night",
+    "description": "Meet fellow business owners in the region.",
+    "image": "images/discover/networking.jpg"
+  }
+]

@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Meta data -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chamber of Commerce Thank you Page WDD 231: Web Frontend Development II">
+  <meta name="description" content="Chamber of Commerce Discover Page WDD 231: Web Frontend Development II">
   <meta name="author" content="Nathalie Oliekan">
-  <title>WDD 231 | Chamber of Commerce Thank you Page</title>
+  <title>WDD 231 | Chamber of Commerce Discover Page</title>
 
   <!-- Open Graph (Social Sharing) -->
-  <meta property="og:title" content="Chamber of Commerce Thank you - WDD 231">
-  <meta property="og:description" content="A Thank you page for the Chamber of Commerce website project in WDD 231.">
+  <meta property="og:title" content="Chamber of Commerce Discover - WDD 231">
+  <meta property="og:description" content="A Discover page for the Chamber of Commerce website project in WDD 231.">
   <meta property="og:image" content="https://yourdomain.com/chamber/images/og-image.jpg">
   <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
 
@@ -25,9 +26,7 @@
   <!-- Javascript References -->
   <script src="scripts/date.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
-  <script src="scripts/join.js" defer></script>
-  <script src="scripts/thankyou.js" defer></script>
+  <script src="scripts/discover.js" defer></script>
 
 </head>
 
@@ -42,27 +41,22 @@
         <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html" class="active">Join Us</a></li>
+        <li><a href="join.html">Join Us</a></li>
         <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
-    <main class="thank-you">
+    <main>
+        <section class="visits-section">
+            <h2>Welcome!</h2>
+            <p id="visits-message"></p>
+        </section>
 
-        <h1>Thank You for Joining!</h1>
-        <p>We appreciate you taking the time to join the Chamber of Commerce. Here is the information you submitted:</p>
-
-        <ul>
-        <li><strong>First Name:</strong> <span id="firstName"></span></li>
-        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
-        <li><strong>Email:</strong> <span id="email"></span></li>
-        <li><strong>Mobile Phone:</strong> <span id="phone"></span></li>
-        <li><strong>Business/Organization Name:</strong> <span id="organization"></span></li>
-        <li><strong>Form Submitted At:</strong> <span id="timestamp"></span></li>
-        </ul>
-
-        <p>If you have any questions, feel free to <a href="mailto:info@chamberofcommerce.org">contact us</a>.</p>
+        <section class="discover-grid">
+            <!-- Cards will be populated by discover.js -->
+        </section>
     </main>
+
 
     <footer>
         <div class="footer-section contact-info">
@@ -88,5 +82,4 @@
         </div>
     </footer>
 </body>
-
 </html>
