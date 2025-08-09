@@ -1,0 +1,87 @@
+
+:root {
+    --primary-color: #36180a; 
+    --secondary-color: #144b19; 
+    --section-bg-color: #e6e1ba; 
+    --section-header-color: #227e6a; 
+    --card-background-color: white;
+    --nav-background-color: black;
+    --nav-text-color: white;
+    --nav-hover-color: #144b19;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--section-bg-color);
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-size: 3.5rem;
+}
+
+/* ------------------Nav styling------------------- */
+.menu-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    display: flex;
+    text-align: left;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: var(--nav-text-color);
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: var(--nav-hover-color);
+    border-radius: 5px;
+    color: var(--nav-text-color);
+}
+
+/* ------------------General Page styling------------------- */
+
+main {
+    width: 95%;
+    max-width: 1500px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop Page</title>
+        <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Nathalie Oliekan | Shop Page">
+        <meta name="author" content="Nathalie Oliekan">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/base-large.css" media="(min-width: 768px)">
+        <link rel="stylesheet" href="styles/shop.css">
+        <script src="scripts/base.js" defer></script>
+        <script src="scripts/shop.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Healing Power</h1>
+            <button id="menu-toggle" class="menu-button">☰</button>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main class="shop-container">
+            <section class="filters-top">
+              <input type="text" id="searchInput" placeholder="Search by name..." />
+              <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="essential-oils">Essential Oils</option>
+                <option value="wellness-products">Wellness Products</option>
+              </select>
+            </section>
+        
+            <section class="products" id="productList">
+            </section>
+        
+            <aside class="cart">
+              <h2>Shopping Cart</h2>
+              <ul id="cartItems"></ul>
+              <p>Total: $<span id="cartTotal">0.00</span></p>
+            </aside>
+          </main>
+    
+        <footer>
+            <p>&copy; <span id="currentyear"></span> | Nathalie Oliekan | Arizona/USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>

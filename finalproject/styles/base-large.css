@@ -1,0 +1,16 @@
+nav {
+    display: block !important;
+}
+
+.menu-button {
+    display: none; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}

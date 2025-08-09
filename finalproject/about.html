@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us Page</title>
+        <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Nathalie Oliekan | About Us Page">
+        <meta name="author" content="Nathalie Oliekan">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/base-large.css" media="(min-width: 768px)">
+        <link rel="stylesheet" href="styles/about.css">
+        <script src="scripts/base.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Healing Power</h1>
+            <button id="menu-toggle" class="menu-button">☰</button>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main>
+            <section class="about-hero">
+                <img src="images/about us.webp" alt="About Hero Image" loading="lazy" >
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>
+                        Healing Power was born out of a deep belief in the natural harmony between mind, body, and spirit. 
+                        What started as a small personal journey toward wellness and emotional healing soon blossomed into a 
+                        heartfelt mission to help others rediscover their inner peace through simple, holistic practices. 
+                        Inspired by generations of wisdom and the healing traditions rooted in nature, our founders wanted to 
+                        create a space where people could reconnect—with themselves, with others, and with the earth.
+                    </p>
+                    <p>
+                        Our goal is to empower individuals to embrace balance in their everyday lives. We understand that 
+                        modern life can be overwhelming—filled with noise, pressure, and constant busyness. That’s why 
+                        Healing Power exists: to provide natural tools and guidance to help you slow down, breathe deeply, 
+                        and realign with what truly matters. Whether it’s through calming essential oils, wellness rituals, 
+                        or simply pausing with intention, our mission is to make well-being accessible and meaningful for everyone.
+                    </p>
+                    <p>
+                        We are passionate about supporting not just individual transformation, but also building a 
+                        community rooted in compassion, awareness, and growth. Our products are designed for people of 
+                        all ages and backgrounds—whether you’re a busy parent needing a moment of calm, a student navigating 
+                        stress, a professional seeking clarity, or anyone in between. Everyone deserves to feel supported on their wellness journey.
+                    </p>
+                    <p>
+                        At Healing Power, we believe wellness is not a luxury—it’s a necessity. Mental, emotional, and 
+                        physical health are deeply connected, and small daily habits can have a powerful ripple effect on 
+                        your life and the lives of those around you. When we take care of ourselves, we become more present, 
+                        more loving, and more capable of making a positive impact.
+                    </p>
+                    <p>
+                        We invite you to be part of this journey with us. Together, we can create a world that values 
+                        healing, mindfulness, and intentional living. Whether you're just starting out or continuing a 
+                        path of growth, know that you are never alone. Let’s uplift one another, celebrate the beauty of 
+                        being human, and embrace the healing power that lives in each of us. 
+                    </p>
+                </div>
+            </section>
+    
+            <section>
+                <h2>Join Our Wellness Community</h2>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="tel" id="phone" name="phone">
+    
+                    <label for="age">Age (Optional):</label>
+                    <input type="number" id="age" name="age">
+    
+                    <label for="gender">Gender (Optional):</label>
+                    <select id="gender" name="gender">
+                        <option value="" disabled selected>Select</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+                    <label for="interests">Tell us about your interests (Optional):</label>
+                    <textarea id="interests" name="interests" rows="4"></textarea>
+    
+                    <button type="submit">Join Now</button>
+                </form>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; <span id="currentyear"></span> | Nathalie Oliekan | Arizona/USA</p>
+            <p id="lastModified"></p>
+        </footer>
+    </body>
+</html>
