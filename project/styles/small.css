@@ -510,3 +510,142 @@ main h2 {
   box-sizing: border-box;
   overflow-x: auto;
 }
+
+/* ---------- About us styling --------- -*/
+.about-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
+}
+
+.about-hero img {
+    width: 100%;
+    max-width: 600px;
+    object-fit: cover;
+    flex: 1;
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+}
+
+h2{
+    text-align: center
+}
+
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ---------- Thank you page Styling ---------- */
+
+.thank-you {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+.thank-you h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.thank-you p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.thank-you ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto 2rem;
+  max-width: 400px;
+}
+
+.thank-you ul li {
+  background-color: var(--secondary-color);
+  color: white;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.thank-you ul li strong {
+  flex: 1 1 40%;
+}
+
+.thank-you ul li span {
+  flex: 1 1 60%;
+  text-align: right;
+  word-break: break-word;
+}
+
+.thank-you a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.thank-you a:hover,
+.thank-you a:focus {
+  color: #7a3a13;
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .thank-you ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .thank-you ul li span {
+    text-align: left;
+    margin-top: 0.3rem;
+  }
+}
