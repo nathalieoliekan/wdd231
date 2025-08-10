@@ -1,158 +1,107 @@
-// shop.js
+let products = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const products = [
-    {
-      id: 1,
-      name: "Lemon Essential Oil",
-      category: "essential-oils",
-      price: 8.99,
-      image: "images/lemon.webp",
-      description: "Invigorating and cleansing. Boosts energy, supports mood, and purifies the air with a fresh citrus aroma."
-    },
-    {
-      id: 2,
-      name: "Sandalwood Essential Oil",
-      category: "essential_oils",
-      price: 10.99,
-      image: "images/sandalwood.webp",
-      description: "Grounding and balancing. Helps reduce stress and anxiety, enhances focus, and supports restful sleep when blended with Lavender or Orange."
-    },
-    {
-      id: 3,
-      name: "Jasmine Essential Oil",
-      category: "essential_oils",
-      price: 8.99,
-      image: "images/Jasmine.webp",
-      description: "Romantic and uplifting. Promotes emotional well-being, reduces anxiety, and enhances confidence and mood."
-    },
-    {
-      id: 4,
-      name: "Frankincense Essential Oil",
-      category: "essential_oils",
-      price: 16.99,
-      image: "images/frankincense.webp",
-      description: "Deeply calming and spiritual. Supports meditation, reduces inflammation, and promotes healthy skin and breathing."
-    },
-    {
-      id: 5,
-      name: "Chamomile Essential Oil",
-      category: "essential_oils",
-      price: 8.99,
-      image: "images/Chamomile.webp",
-      description: "Gentle and relaxing. Eases tension, encourages restful sleep, and soothes sensitive skin and digestive discomfort."
-    },
-    {
-      id: 6,
-      name: "Lavender Essential Oil",
-      category: "essential_oils",
-      price: 8.99,
-      image: "images/lavender.webp",
-      description: "Versatile and calming. Alleviates stress and anxiety, promotes relaxation, improves sleep, and soothes skin irritation."
-    },
-    {
-      id: 7,
-      name: "Essential Oil Diffuser",
-      category: "wellness-products",
-      price: 41.99,
-      image: "images/diffuser.webp",
-      description: "Ultrasonic diffuser to disperse essential oils into the air. Enhances mood, purifies the environment, and supports respiratory comfort."
-    },
-    {
-      id: 8,
-      name: "Aromatherapy Package",
-      category: "wellness-products",
-      price: 85.99,
-      image: "images/aromatherapy pckg.webp",
-      description: "A curated set of essential oils to promote balance, relaxation, and emotional wellness—perfect for daily self-care rituals or gifts."
-    }
-  ];
-  
-  const productList = document.getElementById("productList");
-  const searchInput = document.getElementById("searchInput");
-  const categoryFilter = document.getElementById("categoryFilter");
-  const cartItems = document.getElementById("cartItems");
-  const cartTotal = document.getElementById("cartTotal");
-  
-  let cart = [];
-  
-  function renderProducts(items) {
-    productList.innerHTML = "";
-  
-    items.forEach(product => {
-      // Create elements for the product card
-      let card = document.createElement("div");
-      let name = document.createElement("h3");
-      let price = document.createElement("p");
-      let description = document.createElement("p");
-      let img = document.createElement("img");
-      let button = document.createElement("button");
-  
-      // Set content and attributes
-      name.textContent = product.name;
-      price.textContent = `$${product.price.toFixed(2)}`;
-      description.textContent = product.description;
-      img.setAttribute("src", product.image);
-      img.setAttribute("alt", product.name);
-      button.textContent = "Add to Cart";
-      button.setAttribute("onclick", `addToCart(${product.id})`);
-  
-      // Append elements to the card
-      card.className = "product-card";
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(price);
-      card.appendChild(description);
-      card.appendChild(button);
-  
-      // Append card to the product list
-      productList.appendChild(card);
-    });
-  }
-  
-  function filterProducts() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const category = categoryFilter.value;
-  
-    const filtered = products.filter((product) => {
-      const matchesCategory = category === "all" || product.category === category;
-      const matchesSearch = product.name.toLowerCase().includes(searchTerm);
-      return matchesCategory && matchesSearch;
-    });
-  
-    renderProducts(filtered);
-  }
-  
-  function addToCart(productId) {
-    const product = products.find((p) => p.id === productId);
-    const item = cart.find((c) => c.id === productId);
-  
-    if (item) {
-      item.quantity += 1;
-    } else {
-      cart.push({ ...product, quantity: 1 });
-    }
-  
+const productList = document.getElementById("productList");
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const cartItems = document.getElementById("cartItems");
+const cartTotal = document.getElementById("cartTotal");
+
+// Modal Elements
+const modal = document.getElementById("productModal");
+const modalContent = document.getElementById("modalContent");
+const modalClose = document.getElementById("modalClose");
+
+async function loadProducts() {
+  try {
+    const response = await fetch("data/products.json");
+    products = await response.json();
+    renderProducts(products);
     updateCart();
+  } catch (err) {
+    console.error("Error loading products:", err);
   }
-  
-  function updateCart() {
-    cartItems.innerHTML = "";
-    let total = 0;
-  
-    cart.forEach((item) => {
-      const li = document.createElement("li");
-      li.textContent = `${item.name} x${item.quantity}`;
-      cartItems.appendChild(li);
-      total += item.price * item.quantity;
-    });
-  
-    cartTotal.textContent = total.toFixed(2);
+}
+
+function renderProducts(items) {
+  productList.innerHTML = "";
+
+  items.forEach(product => {
+    productList.innerHTML += `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}" loading="lazy" onclick="openModal(${product.id})" style="cursor:pointer;" />
+        <h3>${product.name}</h3>
+        <p>$${product.price.toFixed(2)}</p>
+        <p>${product.description}</p>
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
+      </div>
+    `;
+  });
+}
+
+
+function filterProducts() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const category = categoryFilter.value;
+
+  const filtered = products.filter(product => {
+    const matchesCategory = category === "all" || product.category === category;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+    return matchesCategory && matchesSearch;
+  });
+
+  renderProducts(filtered);
+}
+
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  const item = cart.find(c => c.id === productId);
+
+  if (item) {
+    item.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
   }
-  
-  // Event Listeners
-  searchInput.addEventListener("input", filterProducts);
-  categoryFilter.addEventListener("change", filterProducts);
-  
-  // Initial render
-  renderProducts(products);
-  
+
+  updateCart();
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateCart() {
+  cartItems.innerHTML = "";
+  let total = cart.reduce((sum, item) => {
+    cartItems.innerHTML += `<li>${item.name} x${item.quantity}</li>`;
+    return sum + item.price * item.quantity;
+  }, 0);
+
+  cartTotal.textContent = total.toFixed(2);
+}
+
+// Modal functions
+function openModal(productId) {
+  const product = products.find(p => p.id === productId);
+  modalContent.innerHTML = `
+    <img src="${product.image}" alt="${product.name}" class="modal-img">
+    <h2>${product.name}</h2>
+    <p>${product.description}</p>
+    <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
+    <button onclick="addToCart(${product.id}); closeModal();">Add to Cart</button>
+  `;
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+modalClose.addEventListener("click", closeModal);
+window.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+
+// Event Listeners
+searchInput.addEventListener("input", filterProducts);
+categoryFilter.addEventListener("change", filterProducts);
+
+// Init
+loadProducts();
