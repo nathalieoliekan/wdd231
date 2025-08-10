@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "Lemon Essential Oil",
+    "category": "essential-oils",
+    "price": 8.99,
+    "image": "images/lemon.webp",
+    "description": "Invigorating and cleansing. Boosts energy, supports mood, and purifies the air with a fresh citrus aroma."
+  },
+  {
+    "id": 2,
+    "name": "Sandalwood Essential Oil",
+    "category": "essential-oils",
+    "price": 10.99,
+    "image": "images/sandalwood.webp",
+    "description": "Grounding and balancing. Helps reduce stress and anxiety, enhances focus, and supports restful sleep when blended with Lavender or Orange."
+  },
+  {
+    "id": 3,
+    "name": "Jasmine Essential Oil",
+    "category": "essential-oils",
+    "price": 8.99,
+    "image": "images/Jasmine.webp",
+    "description": "Romantic and uplifting. Promotes emotional well-being, reduces anxiety, and enhances confidence and mood."
+  },
+  {
+    "id": 4,
+    "name": "Frankincense Essential Oil",
+    "category": "essential-oils",
+    "price": 16.99,
+    "image": "images/frankincense.webp",
+    "description": "Deeply calming and spiritual. Supports meditation, reduces inflammation, and promotes healthy skin and breathing."
+  },
+  {
+    "id": 5,
+    "name": "Chamomile Essential Oil",
+    "category": "essential-oils",
+    "price": 8.99,
+    "image": "images/Chamomile.webp",
+    "description": "Gentle and relaxing. Eases tension, encourages restful sleep, and soothes sensitive skin and digestive discomfort."
+  },
+  {
+    "id": 6,
+    "name": "Lavender Essential Oil",
+    "category": "essential-oils",
+    "price": 8.99,
+    "image": "images/lavender.webp",
+    "description": "Versatile and calming. Alleviates stress and anxiety, promotes relaxation, improves sleep, and soothes skin irritation."
+  },
+  {
+    "id": 7,
+    "name": "Essential Oil Diffuser",
+    "category": "wellness-products",
+    "price": 41.99,
+    "image": "images/diffuser.webp",
+    "description": "Ultrasonic diffuser to disperse essential oils into the air. Enhances mood, purifies the environment, and supports respiratory comfort."
+  },
+  {
+    "id": 8,
+    "name": "Aromatherapy Package",
+    "category": "wellness-products",
+    "price": 85.99,
+    "image": "images/aromatherapy pckg.webp",
+    "description": "A curated set of essential oils to promote balance, relaxation, and emotional wellness—perfect for daily self-care rituals or gifts."
+  },
+  {
+    "id": 9,
+    "name": "Wellness Tea",
+    "category": "wellness-products",
+    "price": 4.99,
+    "image": "images/wellness_tea.jpg",
+    "description": "Herbal tea for overall wellness."
+  },
+  {
+    "id": 10,
+    "name": "Herbal Tea Packets",
+    "category": "wellness-products",
+    "price": 5.99,
+    "image": "images/herbal_tea_packets.jpg",
+    "description": "Soothing blends of organic herbs designed to support digestion, relaxation, and immune health—perfect for daily wellness."
+  },
+  {
+    "id": 11,
+    "name": "Yoga Mat",
+    "category": "wellness-products",
+    "price": 29.99,
+    "image": "images/yoga_mat.jpg",
+    "description": "Eco-friendly, non-slip yoga mat providing comfort and stability for all levels of practice—enhance your balance and focus."
+  },
+  {
+    "id": 12,
+    "name": "Self-reflection Mirror",
+    "category": "wellness-products",
+    "price": 14.99,
+    "image": "images/self_reflection_mirror.jpg",
+    "description": "Decorative mirror designed to encourage mindfulness and positive affirmations for daily self-awareness and growth."
+  },
+  {
+    "id": 13,
+    "name": "Progress-Tracking Scale",
+    "category": "wellness-products",
+    "price": 49.99,
+    "image": "images/progress_tracking_scale.jpg",
+    "description": "Smart scale that tracks your wellness journey, monitoring weight and body metrics to support healthy lifestyle goals."
+  },
+  {
+    "id": 14,
+    "name": "Calming Table Decor - Autumn",
+    "category": "wellness-products",
+    "price": 19.99,
+    "image": "images/table_decor_autumn.jpg",
+    "description": "Handcrafted decor pieces that create a serene atmosphere, inspiring calm and balance in your living space."
+  },
+  {
+    "id": 15,
+    "name": "Reusable Water Bottle",
+    "category": "wellness-products",
+    "price": 22.99,
+    "image": "images/water_bottle.jpg",
+    "description": "Durable, BPA-free water bottle designed to keep you hydrated on the go while reducing environmental impact."
+  },
+  {
+    "id": 16,
+    "name": "Soothing Spa Table Decor",
+    "category": "wellness-products",
+    "price": 21.99,
+    "image": "images/table_decor_spa.jpg",
+    "description": "Handcrafted decor pieces that create a serene atmosphere, inspiring calm and balance in your living space."
+  },
+  {
+    "id": 17,
+    "name": "Meditation Cushion",
+    "category": "wellness-products",
+    "price": 39.99,
+    "image": "images/meditation_cushion.jpg",
+    "description": "Comfortable cushion crafted to support proper posture and deepen meditation practice for enhanced mindfulness."
+  }
+]

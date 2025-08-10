@@ -25,20 +25,24 @@
         <!-- Javascript References -->
         <script src="scripts/base.js" defer></script>
         <script src="scripts/home.js" defer></script>
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/date.js" defer></script>
     </head>
 
     <body>
         <header>
-            <h1>Healing Power</h1>
-            <button id="menu-toggle" class="menu-button">☰</button>
-            <nav id="nav_menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </nav>
+            <img src="images/coc_logo.png" alt="Site Logo" width="50" height="50" />
+            <span>Healing Power</span>
+            <button id="menu" aria-label="Open navigation menu">☰</button>
         </header>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="About.html">About Us</a></li>
+            </ul>
+        </nav>
     
         <main>
             <section class="hero">
@@ -57,32 +61,32 @@
             <section class="carousel-section">
                 <h2>Why Choose Healing Power?</h2>
                 <div class="carousel-container">
-                  <button class="carousel-btn left" aria-label="Scroll left">&#10094;</button>
-                  <div class="carousel-track-wrapper">
-                    <div class="carousel-track">
-                      <div class="carousel-card">
-                        <img src="images/ingredients.webp" alt="Nature-based icon" loading="lazy" />
-                        <h3>Natural Ingredients</h3>
-                        <p>We only use high-quality, plant-based ingredients designed to nourish body and mind.</p>
-                      </div>
-                      <div class="carousel-card">
-                        <img src="images/ages.webp" alt="Wellness icon" loading="lazy" />
-                        <h3>Wellness for All</h3>
-                        <p>Our products support people of all ages and backgrounds on their personal wellness journeys.</p>
-                      </div>
-                      <div class="carousel-card">
-                        <img src="images/community.webp" alt="Community icon" loading="lazy" />
-                        <h3>Supportive Community</h3>
-                        <p>Be part of a growing wellness movement rooted in compassion and intentional living.</p>
-                      </div>
-                      <div class="carousel-card">
-                        <img src="images/relax.webp" alt="Calm icon" loading="lazy" />
-                        <h3>Promotes Calm</h3>
-                        <p>Our essential oils are carefully selected to support relaxation, sleep, and emotional wellness.</p>
-                      </div>
+                    <button class="carousel-btn left" aria-label="Scroll left">&#10094;</button>
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track">
+                        <div class="carousel-card">
+                            <img src="images/ingredients.webp" alt="Nature-based icon" loading="lazy" />
+                            <h3>Natural Ingredients</h3>
+                            <p>We only use high-quality, plant-based ingredients designed to nourish body and mind.</p>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/ages.webp" alt="Wellness icon" loading="lazy" />
+                            <h3>Wellness for All</h3>
+                            <p>Our products support people of all ages and backgrounds on their personal wellness journeys.</p>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/community.webp" alt="Community icon" loading="lazy" />
+                            <h3>Supportive Community</h3>
+                            <p>Be part of a growing wellness movement rooted in compassion and intentional living.</p>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="images/relax.webp" alt="Calm icon" loading="lazy" />
+                            <h3>Promotes Calm</h3>
+                            <p>Our essential oils are carefully selected to support relaxation, sleep, and emotional wellness.</p>
+                        </div>
+                        </div>
                     </div>
-                  </div>
-                  <button class="carousel-btn right" aria-label="Scroll right">&#10095;</button>
+                    <button class="carousel-btn right" aria-label="Scroll right">&#10095;</button>
                 </div>
             </section>
 
@@ -109,7 +113,8 @@
         </main>
     
         <footer>
-            <p>&copy; <span id="currentyear"></span> | Nathalie Oliekan | Arizona/USA</p>
+            <p>Nathalie Oliekan | WDD 231</p>
+            <p>&copy; <span id="year"></span></p>
             <p id="lastModified"></p>
         </footer>
     </body>
